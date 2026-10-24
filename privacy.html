@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whitebell 개인정보 처리방침</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1d1d1f; --bg:#fff; --muted:#6e6e73; --line:#e5e5ea; --tint:#eef4ff; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#f5f5f7; --bg:#000; --muted:#a1a1a6; --line:#2c2c2e; --tint:#10203a; } }
+  body { margin:0; font:16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; color:var(--fg); background:var(--bg); }
+  main { max-width:720px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:26px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
+  p, li { margin:6px 0; } ul { padding-left:20px; }
+  .muted { color:var(--muted); font-size:14px; }
+  .draft { background:var(--tint); border-radius:12px; padding:12px 14px; margin:16px 0; font-size:14px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; } th, td { text-align:left; border-bottom:1px solid var(--line); padding:8px 6px; vertical-align:top; }
+</style>
+</head>
+<body>
+<main>
+<h1>Whitebell 개인정보 처리방침</h1>
+<p class="muted">시행일: [게시하는 날 기입] · 운영자: Tae Gyeong Lee (서비스명 Whitebell, 브랜드 Whitemason) · 개인정보 문의처: Whitebell 개인정보 담당, support.whitebell@whitemason.club</p>
+<p class="draft">이 문서는 초안입니다. 병원 개인정보보호책임자(CPO)와 법률 검토를 거친 뒤 확정합니다. 현재는 병원 도입 전의 시연·평가판으로 개발자(운영자)가 개인정보처리자로서 직접 책임집니다. 병원이 병동에 도입하면 병원과의 계약에 따라 이 문서를 고칩니다.</p>
+
+<h2>1. 서비스 소개</h2>
+<p>Whitebell은 병동 간호사와 입원 환자 보호자가 요청과 대화를 주고받는 앱입니다. 진단이나 치료를 하지 않습니다. 급한 증상은 병실의 콜벨을 눌러 주세요.</p>
+
+<h2>2. 처리하는 정보와 목적</h2>
+<table>
+<tr><th>이용자</th><th>정보</th><th>목적</th></tr>
+<tr><td>보호자</td><td>침상 코드(연결용), 기기를 구분하는 무작위 번호, 요청 내용, 메시지, 보낸 사진, 환아 이름·등록번호(입력한 경우)</td><td>병동 간호사에게 요청과 대화를 전달하고 침상을 확인</td></tr>
+<tr><td>간호사·병동 관리자</td><td>병원 코드, 병동 코드, 사번(해시로만 저장), 간호사명, 비밀번호(해시로만 저장), 알림용 기기 토큰</td><td>로그인, 요청 알림, 계정 관리</td></tr>
+</table>
+<p>회원가입, 연락처, 위치, 구매 정보, 광고 식별자는 받지 않습니다. 이름과 등록번호는 보호자가 앱 설정에서 입력한 경우에만 처리하며, 간호사가 같은 이름의 환아를 구분하는 용도로 씁니다.</p>
+
+<h2>3. 보관과 삭제</h2>
+<ul>
+<li>퇴원 처리, 연결 초기화, 보호자 로그아웃(마지막 기기)을 하면 해당 침상의 대화, 사진, 환아 이름·등록번호, 요청 기록을 즉시 삭제합니다.</li>
+<li>퇴원하지 않아도 대화와 사진은 작성 후 7일이 지나면 자동으로 삭제합니다.</li>
+<li>시스템 장애 복구용 백업에는 삭제 전 내용이 최대 7일 더 남을 수 있고, 그 뒤 자동으로 사라집니다. 백업은 복구 목적으로만 쓰고 열람하지 않습니다.</li>
+<li>환아 이름·등록번호와 대화는 암호화해서 저장합니다.</li>
+<li>간호사 계정은 병동 관리자가 삭제하면 로그인 정보가 지워집니다.</li>
+</ul>
+
+<h2>4. 제3자 제공과 처리 위탁</h2>
+<p>개인정보를 제3자에게 판매하거나 광고에 쓰지 않습니다. 서버 운영 사업자: [확정 후 기재]. 알림은 Apple 푸시 알림 서비스를 통해 보냅니다(알림에는 침상 번호와 요청 종류만 담고 대화 내용은 담지 않습니다). 위탁·국외 이전에 해당하는 경우 그 내용과 근거를 이 문서에 따로 적습니다.</p>
+
+<h2>5. 안전성 확보 조치</h2>
+<ul>
+<!-- 게시 시점 확인: 서버가 HTTPS가 아니면 이 줄을 뺀다 -->
+<li>모든 통신은 HTTPS로 암호화합니다.</li>
+<li>비밀번호와 사번은 되돌릴 수 없는 방식으로 저장하고, 연속 로그인 실패 시 계정을 잠급니다.</li>
+<li>보호자 화면은 스크린샷과 화면 녹화를 막아 화면의 정보가 다른 곳에 남지 않게 합니다.</li>
+<li>병원·병동별로 데이터를 분리하고, 해당 병동 직원만 해당 병동의 요청을 볼 수 있습니다.</li>
+</ul>
+
+<h2>6. 이용자의 권리</h2>
+<p>보호자는 앱 설정에서 환아 이름·등록번호를 지우거나 로그아웃해 정보를 삭제할 수 있습니다. 그 밖의 열람, 정정, 삭제 요청은 병동 간호사에게 하거나 아래 문의처로 보내 주세요.</p>
+
+<h2>7. 14세 미만 아동</h2>
+<p>이 앱은 아동이 직접 쓰지 않고 법정대리인인 보호자가 사용합니다. 아동에게서 직접 정보를 받지 않습니다.</p>
+
+<h2>8. 쿠키와 추적</h2>
+<p>앱에서는 추적하거나 분석하는 도구를 쓰지 않습니다. 병동 관리 웹 화면은 로그인 유지를 위한 필수 쿠키만 씁니다.</p>
+
+<h2>9. 문의</h2>
+<p>개인정보 문의처: Whitebell 개인정보 담당 · 이메일: support.whitebell@whitemason.club (이메일로 문의해 주세요)</p>
+<p class="muted">변경 이력: [게시하는 날 기입] 처음 게시</p>
+</main>
+</body>
+</html>

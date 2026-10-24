@@ -1,0 +1,5 @@
+{
+  "apiBase": "https://cbgwicatmavonotdogej.supabase.co/functions/v1/api",
+  "kind": "supabase",
+  "rootIsStation": true
+}
